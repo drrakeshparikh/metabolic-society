@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metabolic Society | Connecting Physicians. Advancing Metabolic Medicine.</title>
+<meta name="description" content="Metabolic Society — a professional community of physicians advancing metabolic medicine through education, research, collaboration and clinical excellence.">
+<style>
+:root{--green:#08775d;--green2:#58b84b;--deep:#073f3b;--ink:#102d38;--muted:#5f6f74;--line:#e4ece9;--pale:#eef8f4;--bg:#fff;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#fff;line-height:1.55}a{text-decoration:none;color:inherit}.container{width:min(var(--max),calc(100% - 44px));margin:auto}
+header{height:78px;background:rgba(255,255,255,.96);border-bottom:1px solid #edf2f0;position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:26px}.brand{display:flex;align-items:center;gap:11px}.brand-icon{width:48px;height:48px;object-fit:contain;display:block}.brand-name{font-size:22px;font-weight:800;letter-spacing:-.03em;color:#123a35;line-height:1.05}.brand-tag{display:block;margin-top:4px;font-size:9px;font-weight:800;letter-spacing:.12em;color:var(--green);text-transform:uppercase}.logo{width:245px;height:auto;display:block}.navlinks{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:650;color:#31474d}.navlinks a{transition:.18s}.navlinks a:hover{color:var(--green)}.join{padding:12px 22px;border-radius:28px;background:var(--deep);color:#fff!important}.menu{display:none;border:0;background:none;font-size:26px;color:var(--deep)}
+.hero{position:relative;overflow:hidden;min-height:475px;background:linear-gradient(90deg,#f6faf9 0%,#edf8f4 50%,#d9eee8 100%)}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 45%,rgba(255,255,255,.8),transparent 28%),radial-gradient(circle at 95% 10%,rgba(82,184,75,.22),transparent 28%);pointer-events:none}.hero-grid{min-height:475px;display:grid;grid-template-columns:48% 52%;align-items:center;position:relative;z-index:2}.hero-copy{padding:55px 0}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--green)}.hero h1{font-size:clamp(45px,5.1vw,70px);line-height:.99;letter-spacing:-.055em;margin:17px 0 20px;color:#0b2e3b}.hero h1 span{color:var(--green)}.hero p{font-size:18px;line-height:1.55;color:#45585e;max-width:590px;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 21px;border-radius:28px;border:1px solid var(--green);font-size:13px;font-weight:800;transition:.2s}.btn.primary{background:var(--deep);color:#fff;border-color:var(--deep)}.btn.primary:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(7,63,59,.16)}.btn.outline{background:#fff;color:var(--green)}
+.hero-art{height:475px;position:relative;overflow:hidden;background:url("assets/hero-metabolic-visual.jpg") center center/cover no-repeat}.body{display:none;position:absolute;width:315px;height:455px;right:16%;bottom:-5px;border-radius:150px 150px 80px 80px;background:linear-gradient(90deg,rgba(255,255,255,.16),rgba(255,255,255,.5),rgba(255,255,255,.08));opacity:.92;filter:blur(.1px)}.body:before{content:"";position:absolute;left:75px;top:25px;width:165px;height:165px;border-radius:50%;border:2px solid rgba(255,255,255,.62);background:rgba(255,255,255,.16)}.body:after{content:"";position:absolute;left:42px;top:158px;width:230px;height:265px;border:2px solid rgba(255,255,255,.55);border-radius:48% 48% 38% 38%;background:rgba(255,255,255,.09)}.center-logo{display:none;position:absolute;right:calc(16% + 93px);top:190px;width:110px;height:110px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.78);box-shadow:0 10px 35px rgba(20,90,75,.13);z-index:4}.center-logo img{width:82px}.node{display:none;position:absolute;width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 25px rgba(24,90,78,.12);font-size:32px;z-index:4}.node small{font-size:9px;font-weight:800;color:var(--green);display:block;text-align:center;letter-spacing:.05em}.n1{right:4%;top:50px}.n2{right:30%;top:102px}.n3{right:1%;top:218px}.n4{right:29%;top:285px}.n5{right:4%;top:365px}.n6{right:43%;top:335px}.orbit{display:none;position:absolute;border:1px solid rgba(255,255,255,.7);border-radius:50%;right:4%;top:45px;width:560px;height:390px;transform:rotate(-20deg)}.orbit2{display:none;position:absolute;border:1px solid rgba(255,255,255,.5);border-radius:50%;right:2%;top:65px;width:500px;height:335px;transform:rotate(18deg)}
+.section{padding:72px 0}.about{background:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.section-title{font-size:40px;line-height:1.08;letter-spacing:-.045em;margin:9px 0 16px}.section-title span{color:var(--green)}.about-copy{color:#526369;font-size:15px;max-width:650px}.pillars{display:grid;grid-template-columns:1fr 1fr;border:1px solid #edf1ef;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(13,74,61,.04)}.pillar{padding:25px 22px;border-bottom:1px solid #edf1ef}.pillar:nth-child(odd){border-right:1px solid #edf1ef}.pillar:nth-child(3),.pillar:nth-child(4){border-bottom:0}.pillar-icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#e8f6ee;color:var(--green);font-weight:900;margin-bottom:12px}.pillar h3{font-size:15px;margin:0 0 5px}.pillar p{font-size:12px;color:#68777b;margin:0}
+.update{position:relative;overflow:hidden;background:linear-gradient(100deg,#083f54,#0d5c63 48%,#145e54);color:#fff}.update:before{content:"";position:absolute;width:580px;height:580px;border-radius:50%;right:-160px;top:-280px;border:1px solid rgba(255,255,255,.12);box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.02)}.update-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;position:relative;z-index:2}.update h2{font-size:48px;line-height:1;letter-spacing:-.045em;margin:9px 0 9px}.update .sub{font-size:20px;margin:0 0 13px}.update p{color:rgba(255,255,255,.77);max-width:610px}.announce{display:inline-flex;align-items:center;gap:10px;background:#dff3d5;color:#23523e;padding:12px 16px;border-radius:10px;font-size:13px;font-weight:800;margin-top:8px}.announce span{font-size:19px}.stage{height:240px;position:relative}.mic{position:absolute;right:18%;top:32px;width:38px;height:150px;background:linear-gradient(90deg,#777,#eee,#777);border-radius:20px;transform:rotate(38deg);box-shadow:0 9px 22px rgba(0,0,0,.18)}.mic:before{content:"";position:absolute;top:-10px;left:-8px;width:54px;height:72px;border-radius:28px;background:linear-gradient(90deg,#555,#eee,#555)}.mic:after{content:"";position:absolute;width:130px;height:4px;background:#a8b1b2;left:-64px;bottom:-28px;transform:rotate(-38deg);transform-origin:right}.bokeh{position:absolute;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.09);filter:blur(4px)}.b1{right:55%;top:20px}.b2{right:38%;top:95px;width:120px;height:120px}.b3{right:7%;top:135px;width:65px;height:65px}
+.leadership{background:#fff}.lead-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}.lead-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.person{background:#fff;border:1px solid #e6eeeb;border-radius:14px;overflow:hidden;text-align:center;box-shadow:0 7px 22px rgba(10,60,50,.04)}.person img{width:100%;height:235px;object-fit:cover;object-position:center 18%;display:block;background:#edf4f1}.person:nth-child(1) img{object-position:center 18%}.person:nth-child(2) img{object-position:center 17%}.person:nth-child(3) img{object-position:center 12%}.person:nth-child(4) img{object-position:center 17%}.person-info{padding:15px 10px 17px}.person h3{margin:0 0 3px;font-size:16px}.person p{margin:0;color:#68777b;font-size:12px}
+.membership{background:#eff9f5}.member-row{display:flex;align-items:center;justify-content:space-between;gap:30px}.member-icon{width:68px;height:68px;border-radius:50%;border:1px solid #b9e4d2;background:#d9f4e5;display:grid;place-items:center;color:var(--green);font-size:30px;flex:none}.member-copy{flex:1}.member-copy h2{font-size:31px;line-height:1.1;margin:0 0 6px;letter-spacing:-.035em}.member-copy p{margin:0;color:#53646a;font-size:14px}.contact{background:#073f3b;color:#fff;padding:58px 0 28px}.footer-grid{display:grid;grid-template-columns:1.15fr .7fr 1.1fr 1.05fr 1fr;gap:32px}.footer-logo{width:225px;filter:brightness(0) invert(1);opacity:.96}.footer-brand{display:inline-flex}.contact h4{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#b7ddd1;margin:0 0 14px}.contact p,.contact a{font-size:13px;color:rgba(255,255,255,.72);margin:0 0 8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:35px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;color:rgba(255,255,255,.52);font-size:11px}
+@media(max-width:1000px){.navlinks{gap:15px}.brand-icon{width:44px;height:44px}.brand-name{font-size:20px}.brand-tag{font-size:8px}.hero-grid{grid-template-columns:52% 48%}.hero h1{font-size:54px}.lead-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.hero-art{opacity:.9}}
+@media(max-width:760px){header{height:70px}.footer-grid{grid-template-columns:1fr!important}.brand-icon{width:44px;height:44px}.brand-name{font-size:20px}.brand-tag{font-size:8px}.navlinks{display:none}.menu{display:block}.hero{min-height:620px}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:55px 0 20px}.hero-art{height:300px;margin-top:-20px;background-position:center center}.body{height:330px;width:230px;right:19%;}.center-logo{right:calc(19% + 58px);top:110px;width:82px;height:82px}.center-logo img{width:63px}.n1{right:1%;top:5px}.n2{right:32%;top:30px}.n3{right:0;top:115px}.n4{right:31%;top:165px}.n5{right:3%;top:225px}.n6{right:45%;top:200px}.orbit{right:-20%;top:-15px;width:430px;height:300px}.orbit2{right:-16%;top:0;width:380px;height:260px}.about-grid,.update-grid{grid-template-columns:1fr}.stage{display:none}.lead-head{align-items:start;flex-direction:column}.member-row{align-items:flex-start;flex-direction:column}.member-icon{display:none}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}.section{padding:60px 0}}
+@media(max-width:520px){.container{width:min(var(--max),calc(100% - 28px))}.hero h1{font-size:48px}.hero p{font-size:16px}.pillars{grid-template-columns:1fr}.pillar:nth-child(odd){border-right:0}.pillar:nth-child(3){border-bottom:1px solid #edf1ef}.update h2{font-size:40px}.lead-grid{grid-template-columns:1fr 1fr;gap:10px}.person img{height:180px}.person h3{font-size:13px}.person p{font-size:10px}.section-title{font-size:34px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a href="#home" class="brand"><img class="brand-icon" src="assets/metabolic-icon.png" alt=""><span><span class="brand-name">Metabolic Society</span><span class="brand-tag">Connecting physicians · Advancing metabolic medicine</span></span></a>
+  <nav class="navlinks" aria-label="Primary">
+   <a href="#about">About</a><a href="#focus">Activities</a><a href="#update">Metabolic Update</a><a href="#membership">Membership</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a><a class="join" href="#membership">Join the Society</a>
+  </nav>
+  <button class="menu" aria-label="Open menu" onclick="document.querySelector('.navlinks').classList.toggle('mobile-open')">☰</button>
+ </div>
+</header>
+
+<main id="home">
+<section class="hero">
+ <div class="container hero-grid">
+  <div class="hero-copy">
+   <div class="eyebrow">Metabolic Society</div>
+   <h1>Advancing<br>Metabolic Medicine.<br><span>Together.</span></h1>
+   <p>A professional community of physicians committed to better understanding, prevention and management of metabolic and lifestyle-related disorders.</p>
+   <div class="actions"><a class="btn primary" href="#membership">Become a Member&nbsp; →</a><a class="btn outline" href="#about">Learn More&nbsp; ↓</a></div>
+  </div>
+  <div class="hero-art" aria-hidden="true"></div>
+ </div>
+</section>
+
+<section class="section about" id="about">
+ <div class="container about-grid">
+  <div><div class="eyebrow">About the Society</div><h2 class="section-title">About the <span>Metabolic Society</span></h2><p class="about-copy">Metabolic Society is a professional organisation of physicians and healthcare professionals with an interest in metabolic medicine and lifestyle-related chronic disorders. We provide a platform for clinicians to share knowledge, exchange ideas and work together to improve standards of patient care through scientific meetings, workshops, research and continuing medical education.</p></div>
+  <div class="pillars" id="focus">
+   <div class="pillar"><div class="pillar-icon">♧</div><h3>Knowledge Exchange</h3><p>A platform for clinicians to share expertise and ideas.</p></div>
+   <div class="pillar"><div class="pillar-icon">▣</div><h3>Scientific Education</h3><p>Meetings, workshops and continuing medical education.</p></div>
+   <div class="pillar"><div class="pillar-icon">⌁</div><h3>Research &amp; Innovation</h3><p>Encouraging research and sharing emerging evidence.</p></div>
+   <div class="pillar"><div class="pillar-icon">♧</div><h3>Clinical Excellence</h3><p>Working towards higher standards of patient care.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section update" id="update">
+ <div class="container update-grid">
+  <div><div class="eyebrow" style="color:#bfe7d6">Annual Scientific Conference</div><h2>METABOLIC UPDATE</h2><p class="sub">Annual Scientific Conference of the Metabolic Society</p><p>Bringing physicians together for contemporary science, clinical insights and meaningful professional exchange.</p><div class="announce"><span>▣</span> Next edition: Dates and venue to be announced soon</div></div>
+  <div class="stage"><div class="bokeh b1"></div><div class="bokeh b2"></div><div class="bokeh b3"></div><div class="mic"></div></div>
+ </div>
+</section>
+
+<section class="section leadership" id="leadership">
+ <div class="container">
+  <div class="lead-head"><div><div class="eyebrow">Leadership</div><h2 class="section-title">Our <span>Leadership</span></h2></div><a class="btn outline" href="mailto:metabolicsocietyofindia@gmail.com?subject=Metabolic%20Society%20Executive%20Committee">View Executive Committee&nbsp; →</a></div>
+  <div class="lead-grid">
+   <article class="person"><img src="assets/leadership/alok.jpg" alt="Dr Alok Saxena"><div class="person-info"><h3>Dr Alok Saxena</h3><p>President</p></div></article>
+   <article class="person"><img src="assets/leadership/sanjay.jpg" alt="Dr Sanjay Mehndiratta"><div class="person-info"><h3>Dr Sanjay Mehndiratta</h3><p>Vice President</p></div></article>
+   <article class="person"><img src="assets/leadership/deepak.jpg" alt="Dr Deepak Gupta"><div class="person-info"><h3>Dr Deepak Gupta</h3><p>General Secretary</p></div></article>
+   <article class="person"><img src="assets/leadership/rakesh.jpg" alt="Dr Rakesh Parikh"><div class="person-info"><h3>Dr Rakesh Parikh</h3><p>Chair, International Collaborations</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="section membership" id="membership">
+ <div class="container member-row"><div class="member-icon">♧</div><div class="member-copy"><h2>Join the Metabolic Society</h2><p>Be part of a growing community of physicians dedicated to advancing metabolic medicine through education, research and collaboration.</p></div><a class="btn primary" href="mailto:metabolicsocietyofindia@gmail.com?subject=Membership%20Enquiry">Apply for Membership&nbsp; →</a></div>
+</section>
+</main>
+
+<footer class="contact" id="contact">
+ <div class="container footer-grid">
+  <div><a href="#home" class="brand footer-brand"><img class="brand-icon" src="assets/metabolic-icon.png" alt=""><span><span class="brand-name" style="color:#fff">Metabolic Society</span><span class="brand-tag" style="color:#b7ddd1">Connecting physicians · Advancing metabolic medicine</span></span></a><p style="margin-top:18px">A professional community of physicians working together for better metabolic health.</p></div>
+  <div><h4>Quick Links</h4><p><a href="#about">About</a></p><p><a href="#focus">Activities</a></p><p><a href="#update">Metabolic Update</a></p><p><a href="#membership">Membership</a></p><p><a href="#leadership">Leadership</a></p></div>
+  <div><h4>Registered Office</h4><p>Tirupati Hospital (A Unit of Dr M R Hospitals Pvt Ltd)<br>A-22, Shastri Nagar, Jaipur, Rajasthan 302016<br>India</p></div>
+  <div><h4>Society Registration</h4><p>Registered under the <strong style="color:#fff">Rajasthan Societies Registration Act, 1958</strong>.</p><p>Registration No. <strong style="color:#fff">COOP/2018/JAIPUR/101107</strong><br>Registered on <strong style="color:#fff">11 June 2018</strong></p></div>
+  <div><h4>Contact</h4><p><a href="mailto:metabolicsocietyofindia@gmail.com">metabolicsocietyofindia@gmail.com</a></p><p style="margin-top:18px"><strong style="color:#fff">For membership &amp; conference enquiries</strong></p><p>Write to the Society at the email above.</p></div>
+ </div>
+ <div class="container footer-bottom"><span>© 2026 Metabolic Society. All rights reserved.</span><span>Registered Society · Jaipur, Rajasthan · Reg. No. COOP/2018/JAIPUR/101107</span></div>
+</footer>
+<script>
+const nav=document.querySelector('.navlinks');
+const style=document.createElement('style');style.textContent='@media(max-width:760px){.navlinks.mobile-open{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;padding:18px 22px;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e4ece9;box-shadow:0 12px 30px rgba(0,0,0,.07)}}';document.head.appendChild(style);
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('mobile-open')));
+</script>
+</body>
+</html>
