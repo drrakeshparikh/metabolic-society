@@ -18,6 +18,28 @@ header{height:78px;background:rgba(255,255,255,.96);border-bottom:1px solid #edf
 @media(max-width:1000px){.navlinks{gap:15px}.brand-icon{width:44px;height:44px}.brand-name{font-size:20px}.brand-tag{font-size:8px}.hero-grid{grid-template-columns:52% 48%}.hero h1{font-size:54px}.lead-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.hero-art{opacity:.9}}
 @media(max-width:760px){header{height:70px}.footer-grid{grid-template-columns:1fr!important}.brand-icon{width:44px;height:44px}.brand-name{font-size:20px}.brand-tag{font-size:8px}.navlinks{display:none}.menu{display:block}.hero{min-height:620px}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:55px 0 20px}.hero-art{height:300px;margin-top:-20px;background-position:center center}.body{height:330px;width:230px;right:19%;}.center-logo{right:calc(19% + 58px);top:110px;width:82px;height:82px}.center-logo img{width:63px}.n1{right:1%;top:5px}.n2{right:32%;top:30px}.n3{right:0;top:115px}.n4{right:31%;top:165px}.n5{right:3%;top:225px}.n6{right:45%;top:200px}.orbit{right:-20%;top:-15px;width:430px;height:300px}.orbit2{right:-16%;top:0;width:380px;height:260px}.about-grid,.update-grid{grid-template-columns:1fr}.stage{display:none}.lead-head{align-items:start;flex-direction:column}.member-row{align-items:flex-start;flex-direction:column}.member-icon{display:none}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}.section{padding:60px 0}}
 @media(max-width:520px){.container{width:min(var(--max),calc(100% - 28px))}.hero h1{font-size:48px}.hero p{font-size:16px}.pillars{grid-template-columns:1fr}.pillar:nth-child(odd){border-right:0}.pillar:nth-child(3){border-bottom:1px solid #edf1ef}.update h2{font-size:40px}.lead-grid{grid-template-columns:1fr 1fr;gap:10px}.person img{height:180px}.person h3{font-size:13px}.person p{font-size:10px}.section-title{font-size:34px}}
+
+/* Contact / Membership Enquiry Modal */
+.contact-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(7,63,59,.58);align-items:center;justify-content:center;padding:20px;}
+.contact-modal.active{display:flex;}
+.contact-modal-content{position:relative;width:min(560px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:18px;padding:34px;box-shadow:0 24px 70px rgba(0,0,0,.24);}
+.contact-modal-content h2{margin:0 0 8px;color:#123a35;font-size:28px;line-height:1.15;letter-spacing:-.035em;}
+.contact-intro{margin:0 0 22px;color:#5f6f74;font-size:14px;}
+.contact-modal-close{position:absolute;right:14px;top:10px;width:38px;height:38px;border:0;background:transparent;color:#5f6f74;font-size:30px;line-height:1;cursor:pointer;}
+.contact-modal-content label{display:block;margin:14px 0 6px;color:#263f3b;font-size:13px;font-weight:750;}
+.contact-modal-content input,.contact-modal-content select,.contact-modal-content textarea{width:100%;box-sizing:border-box;padding:12px 13px;border:1px solid #d8e3df;border-radius:9px;background:#fff;color:#263f3b;font:inherit;font-size:14px;}
+.contact-modal-content input:focus,.contact-modal-content select:focus,.contact-modal-content textarea:focus{outline:none;border-color:#08775d;box-shadow:0 0 0 3px rgba(8,119,93,.10);}
+.contact-submit{width:100%;margin-top:20px;padding:13px 20px;border:0;border-radius:28px;background:#073f3b;color:#fff;font:inherit;font-size:14px;font-weight:800;cursor:pointer;}
+.contact-submit:hover{background:#0a514b;}
+.contact-submit:disabled{opacity:.65;cursor:wait;}
+.contact-form-status{margin-top:16px;padding:12px 14px;border-radius:9px;font-size:13px;}
+.contact-form-status.error{background:#fff1f0;color:#9b2c25;border:1px solid #f0c7c3;}
+.contact-success{display:none;padding:8px 0 2px;color:#3f5551;font-size:14px;}
+.contact-success h3{margin:0 0 8px;color:#08775d;font-size:20px;}
+.contact-success p{margin:0 0 10px;}
+.contact-success a{color:#08775d;font-weight:700;}
+@media(max-width:600px){.contact-modal{padding:12px}.contact-modal-content{padding:28px 20px;border-radius:15px}.contact-modal-content h2{font-size:24px;}}
+
 </style>
 </head>
 <body>
@@ -25,7 +47,7 @@ header{height:78px;background:rgba(255,255,255,.96);border-bottom:1px solid #edf
  <div class="container nav">
   <a href="#home" class="brand"><img class="brand-icon" src="assets/metabolic-icon.png" alt=""><span><span class="brand-name">Metabolic Society</span><span class="brand-tag">Connecting physicians · Advancing metabolic medicine</span></span></a>
   <nav class="navlinks" aria-label="Primary">
-   <a href="#about">About</a><a href="#focus">Activities</a><a href="#update">Metabolic Update</a><a href="#membership">Membership</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a><a class="join" href="#membership">Join the Society</a>
+   <a href="#about">About</a><a href="#focus">Activities</a><a href="#update">Metabolic Update</a><a href="#membership">Membership</a><a href="#leadership">Leadership</a><a href="#" onclick="openContactForm('general'); return false;">Contact</a><a class="join" href="#" onclick="openContactForm('membership'); return false;">Join the Society</a>
   </nav>
   <button class="menu" aria-label="Open menu" onclick="document.querySelector('.navlinks').classList.toggle('mobile-open')">☰</button>
  </div>
@@ -38,7 +60,7 @@ header{height:78px;background:rgba(255,255,255,.96);border-bottom:1px solid #edf
    <div class="eyebrow">Metabolic Society</div>
    <h1>Advancing<br>Metabolic Medicine.<br><span>Together.</span></h1>
    <p>A professional community of physicians committed to better understanding, prevention and management of metabolic and lifestyle-related disorders.</p>
-   <div class="actions"><a class="btn primary" href="#membership">Become a Member&nbsp; →</a><a class="btn outline" href="#about">Learn More&nbsp; ↓</a></div>
+   <div class="actions"><a class="btn primary" href="#" onclick="openContactForm('membership'); return false;">Become a Member&nbsp; →</a><a class="btn outline" href="#about">Learn More&nbsp; ↓</a></div>
   </div>
   <div class="hero-art" aria-hidden="true"></div>
  </div>
@@ -76,8 +98,47 @@ header{height:78px;background:rgba(255,255,255,.96);border-bottom:1px solid #edf
 </section>
 
 <section class="section membership" id="membership">
- <div class="container member-row"><div class="member-icon">♧</div><div class="member-copy"><h2>Join the Metabolic Society</h2><p>Be part of a growing community of physicians dedicated to advancing metabolic medicine through education, research and collaboration.</p></div><a class="btn primary" href="mailto:metabolicsocietyofindia@gmail.com?subject=Membership%20Enquiry">Apply for Membership&nbsp; →</a></div>
+ <div class="container member-row"><div class="member-icon">♧</div><div class="member-copy"><h2>Join the Metabolic Society</h2><p>Be part of a growing community of physicians dedicated to advancing metabolic medicine through education, research and collaboration.</p></div><a class="btn primary" href="#" onclick="openContactForm('membership'); return false;">Apply for Membership&nbsp; →</a></div>
 </section>
+
+<!-- Contact / Membership Enquiry Modal -->
+<div id="contactModal" class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+ <div class="contact-modal-content">
+  <button class="contact-modal-close" type="button" aria-label="Close" onclick="closeContactForm()">&times;</button>
+  <div id="contactFormView">
+   <h2 id="contactModalTitle">Contact the Metabolic Society</h2>
+   <p class="contact-intro">Please provide your details and we will get back to you shortly.</p>
+   <form id="contact-form" action="https://formspree.io/f/xjygkgvy" method="POST">
+    <input type="hidden" name="enquiry_type" id="enquiry_type" value="General Enquiry">
+    <label for="contact-name">Full Name *</label>
+    <input type="text" id="contact-name" name="name" autocomplete="name" required>
+    <label for="contact-email">Email Address *</label>
+    <input type="email" id="contact-email" name="email" autocomplete="email" required>
+    <label for="contact-mobile">Mobile Number *</label>
+    <input type="tel" id="contact-mobile" name="mobile" autocomplete="tel" required>
+    <label for="contact-interest">I am contacting the Society regarding *</label>
+    <select id="contact-interest" name="interest" required>
+     <option value="">Please select</option>
+     <option value="Membership">Membership</option>
+     <option value="General Enquiry">General Enquiry</option>
+     <option value="Metabolic Update">Metabolic Update</option>
+     <option value="Academic / Scientific Collaboration">Academic / Scientific Collaboration</option>
+     <option value="Other">Other</option>
+    </select>
+    <label for="contact-message">Message / Enquiry</label>
+    <textarea id="contact-message" name="message" rows="5"></textarea>
+    <button type="submit" class="contact-submit" id="contact-submit">Submit Enquiry</button>
+    <div id="contact-form-status" class="contact-form-status" style="display:none"></div>
+   </form>
+  </div>
+  <div id="contactSuccess" class="contact-success">
+   <h3>Thank you for contacting the Metabolic Society.</h3>
+   <p>We have received your enquiry and will get back to you shortly.</p>
+   <p>You may also email us directly at <a href="mailto:metabolicsocietyofindia@gmail.com">metabolicsocietyofindia@gmail.com</a>.</p>
+  </div>
+ </div>
+</div>
+
 </main>
 
 <footer class="contact" id="contact">
@@ -95,5 +156,65 @@ const nav=document.querySelector('.navlinks');
 const style=document.createElement('style');style.textContent='@media(max-width:760px){.navlinks.mobile-open{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;padding:18px 22px;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e4ece9;box-shadow:0 12px 30px rgba(0,0,0,.07)}}';document.head.appendChild(style);
 document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('mobile-open')));
 </script>
+
+<script>
+const contactModal=document.getElementById('contactModal');
+const contactForm=document.getElementById('contact-form');
+const contactInterest=document.getElementById('contact-interest');
+const enquiryType=document.getElementById('enquiry_type');
+const contactFormView=document.getElementById('contactFormView');
+const contactSuccess=document.getElementById('contactSuccess');
+const contactStatus=document.getElementById('contact-form-status');
+const contactSubmit=document.getElementById('contact-submit');
+
+function openContactForm(type='general'){
+  contactModal.classList.add('active');
+  document.body.style.overflow='hidden';
+  const membership=type==='membership';
+  enquiryType.value=membership?'Membership':'General Enquiry';
+  contactInterest.value=membership?'Membership':'General Enquiry';
+  contactFormView.style.display='block';
+  contactSuccess.style.display='none';
+  contactStatus.style.display='none';
+  contactStatus.textContent='';
+  setTimeout(()=>document.getElementById('contact-name').focus(),80);
+}
+function closeContactForm(){
+  contactModal.classList.remove('active');
+  document.body.style.overflow='';
+}
+contactModal.addEventListener('click',e=>{if(e.target===contactModal)closeContactForm();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&contactModal.classList.contains('active'))closeContactForm();});
+contactInterest.addEventListener('change',()=>{enquiryType.value=contactInterest.value||'General Enquiry';});
+contactForm.addEventListener('submit',async e=>{
+  e.preventDefault();
+  contactSubmit.disabled=true;
+  contactSubmit.textContent='Submitting…';
+  contactStatus.style.display='none';
+  try{
+    const response=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});
+    if(response.ok){
+      contactForm.reset();
+      enquiryType.value='General Enquiry';
+      contactFormView.style.display='none';
+      contactSuccess.style.display='block';
+    }else{
+      let message='We could not submit your enquiry. Please try again or email us directly.';
+      try{const data=await response.json();if(data.errors?.length)message=data.errors.map(x=>x.message).join(' ');}catch(_e){}
+      contactStatus.textContent=message;
+      contactStatus.className='contact-form-status error';
+      contactStatus.style.display='block';
+    }
+  }catch(_e){
+    contactStatus.textContent='We could not submit your enquiry. Please check your internet connection or email us directly at metabolicsocietyofindia@gmail.com.';
+    contactStatus.className='contact-form-status error';
+    contactStatus.style.display='block';
+  }finally{
+    contactSubmit.disabled=false;
+    contactSubmit.textContent='Submit Enquiry';
+  }
+});
+</script>
+
 </body>
 </html>
